@@ -13,9 +13,9 @@ Design and implement a component for visualizing items on a timeline.
 2. What you would change if you were going to do it again.
 
     If I were to do it again and had more time, I would definitely improve the UX of the timeline in the following aspects: 
-    - Timeline Navigation: allowing users to navigate with buttons
-    - Zoom: allowing users to zoom in and out based on their mouse position and add buttons to zoom in/out
-    - Make a responsive version for mobile
+    - Timeline Navigation: allowing users to navigate with buttons and make the month and year label stay fixed in place, even as the user scrolls through the timeline.
+    - Zoom: allowing users to zoom in and out based on their mouse position and add buttons to zoom in/out.
+    - Make a responsive version for mobile.
 
 3. How you made your design decisions. For example, if you looked at other timelines for inspiration, please note that.
 
