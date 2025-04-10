@@ -2,7 +2,7 @@ import { Timeline } from "./components/app/timeline";
 
 export function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center overflow-x-auto whitespace-nowrap">
+    <div className="mt-16 flex items-center justify-center">
       <Timeline />
     </div>
   );

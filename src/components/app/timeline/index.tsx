@@ -20,7 +20,7 @@ export function Timeline() {
   const dates = getFullYearDates(year);
 
   return (
-    <div className="w-full flex items-end gap-8 px-6">
+    <div className="w-full flex items-end gap-10">
       {dates.map((date) => {
         const isFirst = getDate(date) === 1;
         const label = isFirst
@@ -28,7 +28,10 @@ export function Timeline() {
           : "";
 
         return (
-          <div key={date.toString()} className="w-4 text-xs text-zinc-400">
+          <div
+            key={date.toString()}
+            className="w-8 text-xs text-zinc-400 first:pl-6 last:pr-6"
+          >
             {isFirst && <div className="mb-4">{label}</div>}
             <div>{date.getDate()}</div>
           </div>

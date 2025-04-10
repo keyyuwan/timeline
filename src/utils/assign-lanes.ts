@@ -10,7 +10,7 @@ const buffer = 2 * 24 * 60 * 60 * 1000 // 2 days
  */
 export function assignLanes(items: TimelineItem[]): Lane[] {
   const sortedItems = items.sort(
-    (a, b) => new Date(a.startDate).getTime() - new Date(b.endDate).getTime()
+    (a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
   )
 
   const lanes: Lane[] = []
