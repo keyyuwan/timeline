@@ -1,14 +1,17 @@
 import { useDates } from "@hooks/timeline/useDates";
 import { useTimeline } from "@hooks/timeline/useTimeline";
-import { DAY_ITEM_WIDTH_IN_PX, DAY_WIDTH_IN_PX } from "@utils/constants";
+import { DAY_ITEM_WIDTH_IN_PX } from "@utils/constants";
 import { format, getDate } from "date-fns";
 
 export function Timeline() {
   const { dates } = useDates({ year: 2021 });
-  const { lanesHeight } = useTimeline();
+  const { lanesHeight, DAY_WIDTH_IN_PX_WITH_ZOOM } = useTimeline();
 
   return (
-    <div className="w-full flex items-end" style={{ gap: DAY_WIDTH_IN_PX }}>
+    <div
+      className="w-full flex items-end"
+      style={{ gap: DAY_WIDTH_IN_PX_WITH_ZOOM }}
+    >
       {dates.map((date) => {
         const dayOfTheMonth = getDate(date);
         const formattedDayOfTheMonth = dayOfTheMonth

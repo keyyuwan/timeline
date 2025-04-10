@@ -7,6 +7,7 @@ import {
 } from '@utils/constants'
 import { TIMELINE_ITEMS, type TimelineItem } from '@utils/timeline-items'
 import { differenceInDays, parseISO } from 'date-fns'
+import { useZoom } from './useZoom'
 
 interface Layout {
   left: number // px
@@ -14,6 +15,9 @@ interface Layout {
 }
 
 export function useTimeline() {
+  const { zoom } = useZoom()
+  const DAY_WIDTH_IN_PX_WITH_ZOOM = DAY_WIDTH_IN_PX * zoom
+
   function getItemLayout(item: TimelineItem, timelineStartDate: Date): Layout {
     const startDateISO = parseISO(item.startDate)
     const endDateISO = parseISO(item.endDate)
@@ -22,9 +26,10 @@ export function useTimeline() {
     const durationInDays = differenceInDays(endDateISO, startDateISO)
 
     const left =
-      daysFromStart * DAY_WIDTH_IN_PX + daysFromStart * DAY_ITEM_WIDTH_IN_PX
+      daysFromStart * DAY_WIDTH_IN_PX_WITH_ZOOM +
+      daysFromStart * DAY_ITEM_WIDTH_IN_PX
     const width =
-      durationInDays * DAY_WIDTH_IN_PX +
+      durationInDays * DAY_WIDTH_IN_PX_WITH_ZOOM +
       (durationInDays + 1) * DAY_ITEM_WIDTH_IN_PX
 
     return { left, width }
@@ -37,5 +42,6 @@ export function useTimeline() {
     lanes,
     lanesHeight,
     getItemLayout,
+    DAY_WIDTH_IN_PX_WITH_ZOOM,
   }
 }

@@ -15,7 +15,7 @@ export function Lanes() {
           return (
             <div
               key={item.id}
-              className="absolute flex items-center rounded-md text-xs whitespace-nowrap overflow-hidden text-ellipsis text-zinc-50 py-1 px-2 bg-indigo-500"
+              className="absolute flex items-center rounded-md text-xs truncate text-zinc-50 py-1 px-2 bg-indigo-500"
               style={{
                 top: laneIndex * (ITEM_HEIGHT_IN_PX + LANES_GAP_IN_PX),
                 left,
