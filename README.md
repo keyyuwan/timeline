@@ -16,6 +16,8 @@ Design and implement a component for visualizing items on a timeline.
     - Timeline Navigation: allowing users to navigate with buttons and make the month and year label stay fixed in place, even as the user scrolls through the timeline.
     - Zoom: allowing users to zoom in and out based on their mouse position and add buttons to zoom in/out.
     - Make a responsive version for mobile.
+    - Enable users to adjust an item's start or end date by dragging it on the timeline.
+    - Let users rename items directly on the timeline without opening a separate form.
 
 3. How you made your design decisions. For example, if you looked at other timelines for inspiration, please note that.
 
