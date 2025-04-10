@@ -1,23 +1,8 @@
+import { useDates } from "@hooks/timeline/useDates";
 import { format, getDate } from "date-fns";
 
 export function Timeline() {
-  function getFullYearDates(year: number): Date[] {
-    const dates: Date[] = [];
-    const start = new Date(year, 0, 1); // Jan 1
-    const end = new Date(year, 11, 31); // Dec 31
-
-    const current = new Date(start);
-
-    while (current <= end) {
-      dates.push(new Date(current));
-      current.setDate(current.getDate() + 1);
-    }
-
-    return dates;
-  }
-
-  const year = 2021;
-  const dates = getFullYearDates(year);
+  const { dates } = useDates({ year: 2021 });
 
   return (
     <div className="w-full flex items-end gap-10">
