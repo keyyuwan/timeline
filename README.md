@@ -31,7 +31,11 @@ Design and implement a component for visualizing items on a timeline.
 
 ## How to run:
 
-1. Navigate to this project directory
+1. Clone the repository
+```
+git clone https://github.com/keyyuwan/timeline
+cd timeline
+```
 2. Run `npm install` to install dependencies
 3. Run `npm run dev` to initialize and connect to a node server with your default browser
 4. Access the app on `http://localhost:5173`
